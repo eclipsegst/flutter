@@ -1,2 +1,9 @@
 include ':app'
 rootProject.name = "Android Sample"
+
+// Add shared_flutter_module
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'shared_flutter_module/.android/include_flutter.groovy'
+))
